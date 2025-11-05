@@ -156,19 +156,32 @@ if st.button("Run Genetic Algorithm"):
     
     ##################################################### RESULTS ###################################################################################
     
-    # brute force
-    initial_best_schedule = finding_best_schedule(all_possible_schedules)
-    
-    rem_t_slots = len(all_time_slots) - len(initial_best_schedule)
-    genetic_schedule = genetic_algorithm(initial_best_schedule, generations=GEN, population_size=POP, elitism_size=EL_S)
-    
-    final_schedule = initial_best_schedule + genetic_schedule[:rem_t_slots]
-    
-    print("\nFinal Optimal Schedule:")
-    for time_slot, program in enumerate(final_schedule):
-        print(f"Time Slot {all_time_slots[time_slot]:02d}:00 - Program {program}")
-    
-    print("Total Ratings:", fitness_function(final_schedule))
 
-    st.success("Genetic Algorithm executed successfully!")
-    st.dataframe(df.head())
+ # Brute force
+    initial_best_schedule = finding_best_schedule(all_possible_schedules)
+
+    rem_t_slots = len(all_time_slots) - len(initial_best_schedule)
+    genetic_schedule = genetic_algorithm(
+    initial_best_schedule,
+    generations=GEN,
+    population_size=POP,
+    crossover_rate=CO_R,
+    mutation_rate=MUT_R,
+    elitism_size=EL_S
+    )
+
+    final_schedule = initial_best_schedule + genetic_schedule[:rem_t_slots]
+
+# Convert schedule to a dataframe for clean display
+    schedule_df = pd.DataFrame({
+    "Time Slot": [f"{hour:02d}:00" for hour in all_time_slots],
+    "Program": final_schedule
+    })
+
+# --- Display results in Streamlit ---
+    st.success("✅ Genetic Algorithm executed successfully!")
+    st.markdown("### 🗓️ Final Optimal Schedule:")
+    st.dataframe(schedule_df)
+
+    st.write("**Total Ratings:**", fitness_function(final_schedule))
+
