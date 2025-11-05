@@ -21,6 +21,7 @@ if st.button("Run Genetic Algorithm"):
 
     # Load the CSV file
     df = pd.read_csv("program_rating.csv")
+    program_ratings_dict = read_csv_to_dict("program_ratings.csv")
 
 # Function to read the CSV file and convert it to the desired format
     def read_csv_to_dict(file_path):
@@ -37,9 +38,6 @@ if st.button("Run Genetic Algorithm"):
                 program_ratings[program] = ratings
     
         return program_ratings
-    
-    # Path to the CSV file
-    file_path = '/content/program_ratings.csv'
     
     # Get the data in the required format
     program_ratings_dict = read_csv_to_dict(file_path)
