@@ -49,8 +49,8 @@ if st.button("Run Genetic Algorithm"):
     
     GEN = 100
     POP = 50
-    CO_R = 0.8
-    MUT_R = 0.2
+    # CO_R = 0.8
+    # MUT_R = 0.2
     EL_S = 2
     
     all_programs = list(ratings.keys()) # all programs
