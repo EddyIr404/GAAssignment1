@@ -20,7 +20,7 @@ st.write(f"- Mutation Rate: {MUT_R}")
 if st.button("Run Genetic Algorithm"):
 
     # Load the CSV file
-    df = pd.read_csv("program_rating.csv")
+    df = pd.read_csv("program_ratings.csv")
     program_ratings_dict = read_csv_to_dict("program_ratings.csv")
 
 # Function to read the CSV file and convert it to the desired format
