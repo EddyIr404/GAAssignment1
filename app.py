@@ -3,10 +3,21 @@ import csv
 import pandas as pd
 import random
 
+def read_csv_to_dict(file_path):
+    program_ratings = {}
+    with open(file_path, mode='r', newline='') as file:
+        reader = csv.reader(file)
+        header = next(reader)  # Skip the header
+        for row in reader:
+            program = row[0]
+            ratings = [float(x) for x in row[1:]]
+            program_ratings[program] = ratings
+    return program_ratings
+
 
 st.title("Scheduling Optimization using Genetic Algorithm")
 
-st.markdown("### Step 3: Modify GA Parameters")
+st.markdown("### Modify GA Parameters")
 
 # --- User Input Sliders ---
 CO_R = st.slider("Crossover Rate", 0.0, 0.95, 0.8, step=0.01)
