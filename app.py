@@ -171,3 +171,4 @@ if st.button("Run Genetic Algorithm"):
     print("Total Ratings:", fitness_function(final_schedule))
 
     st.success("Genetic Algorithm executed successfully!")
+    st.dataframe(df.head())
