@@ -1,5 +1,5 @@
-# GAAssignment1
-Genetic Algorithm assignment for Evolutionary Computation
+# EC Assignment1
+Genetic Algorithm assignment for Evolutionary Computationary
 
 
 # List of what changed in the code parameters and program rating CSV file:
