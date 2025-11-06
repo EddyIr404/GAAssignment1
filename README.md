@@ -12,9 +12,6 @@ Genetic Algorithm assignment for Evolutionary Computation
 | music_program        | Hour 23    | 0.3    | 0.31   |
 | documentary        | Hour 17    | 0.2    | 0.4    |
 
-GEN = 75
-POP = 60
-EL_S = 3
 
 | Parameters     | Default Value | New Value |
 |----------------|--------|--------|
