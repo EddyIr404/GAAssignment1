@@ -16,7 +16,7 @@ Genetic Algorithm assignment for Evolutionary Computation
 | news           | Hour 18    | 0.5    | 0.7    |
 | movie_a    | Hour 9    | 0.4    | 0.2    |
 | tv_series_b        | Hour 14    | 0.4    | 0.3    |
-| music_program        | Hour 23    | 0.3    | 0.31   |
+| music_program        | Hour 23    | 0.3    | 0.1   |
 | documentary        | Hour 17    | 0.2    | 0.4    |
 
 
