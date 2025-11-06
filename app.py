@@ -47,11 +47,11 @@ if st.button("Run Genetic Algorithm"):
     # Sample rating programs dataset for each time slot.
     ratings = program_ratings_dict
     
-    GEN = 100
-    POP = 50
+    GEN = 75
+    POP = 60
     # CO_R = 0.8
     # MUT_R = 0.2
-    EL_S = 2
+    EL_S = 3
     
     all_programs = list(ratings.keys()) # all programs
     all_time_slots = list(range(6, 24)) # time slots
